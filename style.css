@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+.navigation-wraper {
+    display: flex;
+    justify-content: space-between;
+    background-color: blueviolet;
+    padding: 30px;
+}
+.ul-nav {
+    display: flex;
+    list-style-type: none;
+}
+/* .burger-bar {
+    display: none;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    font-size: 25px;
+    color: #fff;
+} */
+.toggle-menu {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+    border:2px solid red;
+    display: none;
+}
+.line {
+    width: 80%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.3s linear;
+}
+.line1 {
+    top: 30%;
+}
+.line3 {
+    top: 70%;
+}
+.activeMenu .line1 {
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+.activeMenu .line2 {
+    display: none;
+}
+.activeMenu .line3 {
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+.navigation.toggleNav {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: darkgray;
+    display: block;
+}
+.toggleNav .ul-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+/* responsive code */
+@media (max-width:480px) {
+    /* pirveli varianti fontawesome */
+    /* .navigation {
+        display: none;
+    } */
+    /* .burger-bar {
+        display: block;
+    } */
+    /* .navigation-wraper {
+        flex-direction: column;
+    }
+    .ul-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .active {
+        display: block;
+    } */
+
+    /* meore varianti animaciit */
+    .toggle-menu {
+        display: block;
+    }
+    .navigation {
+        display: none;
+    }
+}
